@@ -9,3 +9,7 @@ client.setEncoding('utf-8');
 client.connect(port,hostname,function() {
     client.write('你好啊');
 })
+
+client.on('data',function(data) {
+    console.log(data);
+})
