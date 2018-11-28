@@ -11,5 +11,26 @@ client.connect(port,hostname,function() {
 })
 
 client.on('data',function(data) {
-    console.log(data);
+    // console.log(data);
+    say()
+
 })
+
+// 逐行读取
+const readline = require('readline');
+// 建立通信标准
+var r1 = readline.createInterface({
+    input:process.stdin, //input标准
+    output:process.stdout //out 标准
+})
+
+function say(){
+    r1.question('请输入：',function(inputStr) {
+        if(inputStr === 'bye') {
+            client.destroy()
+            console.log('客户端的socket退出')
+        } else {
+            client.write(inputStr + '\n')
+        }
+    })
+}
