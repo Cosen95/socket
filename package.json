@@ -1,0 +1,11 @@
+{
+  "name": "socket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Jack-cool/socket.git",
+  "author": "fengshuan <1263215592@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ws": "^6.1.2"
+  }
+}
